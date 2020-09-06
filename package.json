@@ -1,0 +1,49 @@
+{
+    "name": "react-popoverly",
+    "version": "0.0.1",
+    "description": "A Simple popover for react with no other dependencies.",
+    "keywords": [
+        "react",
+        "popover",
+        "react-popover",
+        "tooltip",
+        "popper"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ElHamster/react-popoverly.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Robin Schuster"
+    },
+    "scripts": {
+        "build": "yarn clean && tsc -p .",
+        "clean": "rimraf dist",
+        "watch": "tsc -p . --watch",
+        "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+        "pretty": "prettier --write --config .prettierrc.js src/**/*.{ts,tsx,js,json}",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@storybook/addon-actions": "^6.0.21",
+        "@storybook/addon-essentials": "^6.0.21",
+        "@storybook/addon-links": "^6.0.21",
+        "@storybook/react": "^6.0.21",
+        "@types/react": "^16.9.49",
+        "@typescript-eslint/eslint-plugin": "^4.0.1",
+        "@typescript-eslint/parser": "^4.0.1",
+        "babel-loader": "^8.1.0",
+        "eslint": "^7.8.1",
+        "eslint-config-prettier": "^6.11.0",
+        "prettier": "^2.1.1",
+        "react": "^16.13.1",
+        "react-is": "^16.13.1",
+        "typescript": "^4.0.2"
+    },
+    "dependencies": {},
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+}
