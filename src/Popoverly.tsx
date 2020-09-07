@@ -48,7 +48,7 @@ class Popoverly extends React.Component<IPopoverProps, IPopoverState> {
         this.popoverElement.classList.add('Popoverly');
     };
 
-    setArrow = (positionStyles: ContainerPostionStyles & { direction: string }): void => {
+    setArrow = (positionStyles: ContainerPostionStyles & { direction?: string }): void => {
         this.arrowRef.current.classList.add(positionStyles.direction);
         this.arrowRef.current.style.left = positionStyles?.left;
         this.arrowRef.current.style.right = positionStyles?.right;

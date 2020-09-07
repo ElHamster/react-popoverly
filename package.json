@@ -1,6 +1,6 @@
 {
     "name": "react-popoverly",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A Simple popover for react with no other dependencies.",
     "keywords": [
         "react",
@@ -18,13 +18,19 @@
         "name": "Robin Schuster"
     },
     "scripts": {
-        "build": "yarn clean && tsc -p .",
+        "build": "yarn clean && tsc -p . && yarn copy-styles",
+        "copy-styles": "copyfiles -f src/*.css dist",
         "clean": "rimraf dist",
         "watch": "tsc -p . --watch",
         "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
         "pretty": "prettier --write --config .prettierrc.js src/**/*.{ts,tsx,js,json}",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "prepare": "yarn build",
+        "prepublishOnly": "yarn lint && yarn pretty",
+        "preversion": "yarn lint",
+        "version": "yarn pretty && git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "devDependencies": {
         "@babel/core": "^7.11.6",
@@ -37,6 +43,7 @@
         "@typescript-eslint/eslint-plugin": "^4.0.1",
         "@typescript-eslint/parser": "^4.0.1",
         "babel-loader": "^8.1.0",
+        "copyfiles": "^2.3.0",
         "eslint": "^7.8.1",
         "eslint-config-prettier": "^6.11.0",
         "prettier": "^2.1.1",
