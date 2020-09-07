@@ -1,0 +1,98 @@
+.Popoverly{
+    position: absolute;
+    z-index: 600;
+    padding: 15px;
+    border: 1px solid #c4c4c4;
+    max-width: 260px;
+    visibility: hidden;
+}
+
+.Popoverly .Popoverly__arrow {
+    position: absolute
+}
+
+.Popoverly .Popoverly__arrow::before,.Popoverly .Popoverly__arrow::after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.Popoverly .Popoverly__arrow::before {
+    border-width: 13px;
+    margin-left: -13px
+}
+
+.Popoverly .Popoverly__arrow::after {
+    border-width: 11px;
+    margin-left: -11px
+}
+
+.Popoverly .Popoverly__arrow.top {
+    bottom: 0;
+    left: 50%
+}
+
+.Popoverly .Popoverly__arrow.top::before {
+    border-top-color: #c4c4c4
+}
+
+.Popoverly .Popoverly__arrow.top::after {
+    border-top-color: #fff
+}
+
+.Popoverly .Popoverly__arrow.bottom {
+    top: -26px;
+    left: 50%
+}
+
+.Popoverly .Popoverly__arrow.bottom:after {
+    border-bottom-color: #fff;
+    margin-top: 4px
+}
+
+.Popoverly .Popoverly__arrow.bottom:before {
+    border-bottom-color: #c4c4c4
+}
+
+.Popoverly .Popoverly__arrow.right {
+    left: -26px;
+    top: 50%
+}
+
+.Popoverly .Popoverly__arrow.right:after {
+    margin-left: 4px;
+    margin-top: -13px;
+    border-right-color: #fff
+}
+
+.Popoverly .Popoverly__arrow.right:before {
+    margin-left: 0;
+    margin-top: -15px;
+    border-right-color: #c4c4c4
+}
+
+.Popoverly .Popoverly__arrow.left {
+    top: 50%;
+    left: 100%
+}
+
+.Popoverly .Popoverly__arrow.left:after {
+    margin-left: 0;
+    margin-top: -13px;
+    border-left-color: #fff
+}
+
+.Popoverly .Popoverly__arrow.left:before {
+    margin-left: 0;
+    margin-top: -15px;
+    border-left-color: #c4c4c4
+}
+
+@media(min-width: 768px){
+    .Popoverly{
+        max-width: 400px;
+    }
+}
