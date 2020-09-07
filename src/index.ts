@@ -1,3 +1,3 @@
-import Popoverly from "./Popoverly";
+import Popoverly from './Popoverly';
 
-export default Popoverly
+export default Popoverly;

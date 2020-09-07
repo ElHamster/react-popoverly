@@ -1,6 +1,6 @@
 {
     "name": "react-popoverly",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A Simple popover for react with no other dependencies.",
     "keywords": [
         "react",
