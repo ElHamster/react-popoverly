@@ -1,5 +1,6 @@
 import React from 'react';
 import Popoverly from '../Popoverly';
+import '../Popoverly.css';
 
 export default {
     title: 'Popoverly',

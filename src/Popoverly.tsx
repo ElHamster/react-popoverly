@@ -3,8 +3,6 @@ import { TPosition } from './types';
 import CalcPosition, { ContainerPostionStyles } from './utils/CalcPosition';
 import PopoverlyPortal from './PopoverlyPortal';
 
-import './Popoverly.css';
-
 export interface IPopoverProps {
     isPopoverOpen?: boolean;
     position: TPosition | TPosition[];
