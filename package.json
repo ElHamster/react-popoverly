@@ -1,6 +1,6 @@
 {
     "name": "react-popoverly",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "A Simple popover for react with no other dependencies.",
     "keywords": [
         "react",
@@ -52,7 +52,12 @@
         "react-is": "^16.13.1",
         "typescript": "^4.0.2"
     },
-    "dependencies": {},
+    "dependencies": {
+        "react-popoverly": "^0.0.4"
+    },
     "main": "dist/index.js",
-    "types": "dist/index.d.ts"
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/*"
+    ]
 }
