@@ -12,6 +12,7 @@ export interface IPopoverProps {
 
 interface IPopoverState {
     isPopoverOpen: boolean;
+    hasMounted: boolean;
 }
 
 class Popoverly extends React.Component<IPopoverProps, IPopoverState> {
@@ -21,9 +22,13 @@ class Popoverly extends React.Component<IPopoverProps, IPopoverState> {
     private readonly arrowRef: React.RefObject<HTMLDivElement>;
     constructor(props: IPopoverProps) {
         super(props);
-        this.state = { isPopoverOpen: props.isPopoverOpen || false };
+        this.state = { isPopoverOpen: props.isPopoverOpen || false, hasMounted: false };
         this.childRef = createRef<HTMLElement>();
         this.arrowRef = createRef<HTMLDivElement>();
+    }
+
+    componentDidMount() {
+        this.setState({ hasMounted: true });
     }
 
     componentDidUpdate(prevProps: Readonly<IPopoverProps>, prevState: Readonly<IPopoverState>): void {
@@ -108,9 +113,10 @@ class Popoverly extends React.Component<IPopoverProps, IPopoverState> {
     };
 
     render(): JSX.Element {
+        const { hasMounted } = this.state;
         return (
             <>
-                {this.renderPopoverlyContainer()}
+                {hasMounted && this.renderPopoverlyContainer()}
                 {this.renderChildContent()}
             </>
         );
